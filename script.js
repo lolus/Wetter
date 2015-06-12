@@ -9,6 +9,10 @@ $ajax({
 	data {
 		units: 'si',
 		lang: 'de'
-	}
+	},
+	dataType: 'jsonp'
 
-})
+}).done(function() {
+
+	console.log(data);
+}
