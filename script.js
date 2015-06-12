@@ -17,6 +17,7 @@ $(document).ready(function(){
 
 	console.log(data);
 	$('.temp').text(data.currently.apparentTemperature+' °C') ;
+
 			//google geocoding
 			$.ajax({
 				url: 'https://maps.googleapis.com/maps/api/geocode/json',
@@ -27,6 +28,7 @@ $(document).ready(function(){
 				}
 			}).done(function(data) {
 				console.log(data);
+				$('.geoloc').text(data.results.0.formatted_address) ;
 			});
 
 		});
