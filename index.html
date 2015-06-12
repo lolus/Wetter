@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile Testseite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="script.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="main">
+
+	<div data-role="header">
+		<h1>Main</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2 class="longitude"></h2>
+		<h2 class="latitude"></h2>
+		<h2 class="accuracy"></h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quae reiciendis qui dignissimos ab fuga dolores laborum blanditiis perferendis eaque, commodi vitae cum cupiditate hic repudiandae provident. Dolorum, quo, ratione.</p>
+		<img width="100%" src="img/meer.jpg" alt="meer">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta ea tempora amet libero quia odit similique, cupiditate totam, ullam obcaecati quisquam. Quibusdam officia voluptates eaque, nesciunt consequatur expedita autem!</p>
+		<p>
+			<a href="#sub" class="ui-btn" data-transition="flip">subpage</a>
+		</p>
+	</div>
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="sub">
+
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Sub</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quae reiciendis qui dignissimos ab fuga dolores laborum blanditiis perferendis eaque, commodi vitae cum cupiditate hic repudiandae provident. Dolorum, quo, ratione.</p>
+		<img width="100%" src="img/himmel.jpg" alt="himmel">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta ea tempora amet libero quia odit similique, cupiditate totam, ullam obcaecati quisquam. Quibusdam officia voluptates eaque, nesciunt consequatur expedita autem!</p>
+	</div>
+
+
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+</body>
+</html>
