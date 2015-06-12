@@ -15,6 +15,7 @@ $(document).ready(function(){
 }).done(function(data) {
 
 	console.log(data);
+	$('.temp').text(data.currently.apparentTemperature);
 		});
 
 	});
