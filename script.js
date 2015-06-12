@@ -28,7 +28,7 @@ $(document).ready(function(){
 				}
 			}).done(function(data) {
 				console.log(data);
-				//$('.geoloc').text(data.results.'0'.formatted_address) ;
+				$('.geoloc').text(results.'0'.formatted_address) ;
 			});
 
 		});
