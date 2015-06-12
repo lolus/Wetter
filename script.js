@@ -19,7 +19,7 @@ $(document).ready(function(){
 	$('.temp').text(data.currently.apparentTemperature+' °C') ;
 			//google geocoding
 			$.ajax({
-				url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDgYh-UffzCV54XCcReML4WSqyb0_zv8x8'
+				url: 'https://maps.googleapis.com/maps/api/geocode/json',
 				data: {
 					latlng: +koordinaten.latitude+','+koordinaten.longitude,
 					key: 'AIzaSyDgYh-UffzCV54XCcReML4WSqyb0_zv8x8',
