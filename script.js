@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	$ajax({
 	url: 'https://api.forecast.io/forecast/fab736851cb5b4f591fac4a86ad0169c/' +koordinaten.latitude+','+koordinaten.longitude,
-	data {
+	data: {
 		units: 'si',
 		lang: 'de'
 	},
