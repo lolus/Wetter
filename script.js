@@ -4,7 +4,7 @@ $(document).ready(function(){
 	
 
 
-	$ajax({
+	$.ajax({
 	url: 'https://api.forecast.io/forecast/fab736851cb5b4f591fac4a86ad0169c/' +koordinaten.latitude+','+koordinaten.longitude,
 	data: {
 		units: 'si',
