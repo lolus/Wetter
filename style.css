@@ -9,3 +9,8 @@ canvas {
 	display: block;
 	margin: auto;
 }
+
+.temp {
+	text-align: center;
+	font-style: bold;
+}
