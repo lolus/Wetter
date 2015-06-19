@@ -50,12 +50,3 @@ $(document).ready(function(){
 	
 });
 
-//skycons.add($('.js-icon')[0], Skycons);
-
-//	skycons.play();
-
-/*	setTimeour(function() {
-		skycons.set($('.js-icon')[0], Skycons.PARTLY_CLOUDY_DAY);
-	}, 5000);
-
-	*/
