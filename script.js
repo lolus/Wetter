@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 	skycons.set($('js-icon')[0], icon)
 
-	skycons.play();
+	//skycons.play();
 
 			//google geocoding
 			$.ajax({
@@ -49,11 +49,11 @@ $(document).ready(function(){
 	
 });
 
-/*skycons.add($('.js-icon')[0], Skycons.);
+skycons.add($('.js-icon')[0], Skycons.);
 
 	skycons.play();
 
-	setTimeour(function() {
+/*	setTimeour(function() {
 		skycons.set($('.js-icon')[0], Skycons.PARTLY_CLOUDY_DAY);
 	}, 5000);
 
