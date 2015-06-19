@@ -2,3 +2,10 @@
 	font-size: 30px;
 	text-align: center;
 }
+
+.canvas {
+	height: 128px;
+	width: 128px;
+	display: block;
+	margin: auto;
+}

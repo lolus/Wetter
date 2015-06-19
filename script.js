@@ -35,4 +35,15 @@ $(document).ready(function(){
 
 	});
 
+	var skycons = new Skycons({
+		color: "grey"
+		resizeClear: true;
+	});
+	skycons.add($('.js-icon')[0], Skycons.RAIN);
+
+	skycons.play();
+
+	setTimeour(function() {
+		skycons.set($('.js-icon')[0], Skycons.PARTLY_CLOUDY_DAY);
+	}, 5000);
 });
