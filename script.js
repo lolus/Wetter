@@ -4,7 +4,7 @@ $(document).ready(function(){
 		
 		var skycons = new Skycons({
 		color: "grey",
-		resizeClear: true;
+		resizeClear: true,
 		});
 
 
