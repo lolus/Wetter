@@ -24,7 +24,7 @@ $(document).ready(function(){
 	icon = data.currently.icon.toUpperCase();
 	console.log(icon);
 
-	skycons.add($('js-icon')[0], icon)
+	skycons.add($('.js-icon')[0], icon)
 
 	skycons.play();
 
