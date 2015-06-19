@@ -1,7 +1,11 @@
 $(document).ready(function(){
 	navigator.geolocation.getCurrentPosition(function(position){
 		var koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
-	
+		
+		var skycons = new Skycons({
+		color: "grey";
+		resizeClear: true;
+		});
 
 
 		//forecast io
@@ -37,10 +41,7 @@ $(document).ready(function(){
 
 	});
 
-	var skycons = new Skycons({
-		color: "grey";
-		resizeClear: true;
-	});
+	
 	skycons.add($('.js-icon')[0], Skycons.RAIN);
 
 	skycons.play();
