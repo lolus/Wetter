@@ -3,7 +3,7 @@
 	text-align: center;
 }
 
-.canvas {
+canvas {
 	height: 128px;
 	width: 128px;
 	display: block;
