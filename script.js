@@ -40,7 +40,7 @@ $(document).ready(function(){
 			}).done(function(data) {
 				console.log(data);
 				$('.geoloc').text(data.results[0].address_components[1].long_name) ;
-				$('.adresse').text(data.results[0].formatted_adress) ;
+				$('.adresse').text(data.results[0].formatted_address) ;
 			});
 
 		});
