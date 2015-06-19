@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	navigator.geolocation.getCurrentPosition(function(position){
 		var koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
-		
+		var icon;
 		var skycons = new Skycons({
 		color: "grey",
 		resizeClear: true,
@@ -21,8 +21,12 @@ $(document).ready(function(){
 
 	console.log(data);
 	$('.temp').text(data.currently.apparentTemperature+' °C') ;
-	var icon = data.currently.icon;
+	icon = data.currently.icon.toUpperCase();
 	console.log(icon);
+
+	skycons.set($('js-icon')[0], icon)
+
+	skycons.play();
 
 			//google geocoding
 			$.ajax({
@@ -42,11 +46,15 @@ $(document).ready(function(){
 	});
 
 	
-	skycons.add($('.js-icon')[0], Skycons.RAIN);
+	
+});
+
+/*skycons.add($('.js-icon')[0], Skycons.);
 
 	skycons.play();
 
 	setTimeour(function() {
 		skycons.set($('.js-icon')[0], Skycons.PARTLY_CLOUDY_DAY);
 	}, 5000);
-});
+
+	*/
