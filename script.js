@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
 		
 		var skycons = new Skycons({
-		color: "grey";
+		color: "grey",
 		resizeClear: true;
 		});
 
