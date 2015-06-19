@@ -17,6 +17,8 @@ $(document).ready(function(){
 
 	console.log(data);
 	$('.temp').text(data.currently.apparentTemperature+' °C') ;
+	var icon = data.currently.icon;
+	console.log(icon);
 
 			//google geocoding
 			$.ajax({
@@ -36,7 +38,7 @@ $(document).ready(function(){
 	});
 
 	var skycons = new Skycons({
-		color: "grey"
+		color: "grey";
 		resizeClear: true;
 	});
 	skycons.add($('.js-icon')[0], Skycons.RAIN);
