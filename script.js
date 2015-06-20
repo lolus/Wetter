@@ -60,7 +60,7 @@ $(document).ready(function(){
 		drawMap(new google.maps.LatLng(koordinaten.latitude, koordinaten.longitude));
 	});
 
-	function drawMap(LatLng) {
+	function drawMap(latlng) {
 		var myOptions = {
 			zoom: 10,
 			center: latlng,
