@@ -64,7 +64,7 @@ $(document).ready(function(){
 		var myOptions = {
 			zoom: 10,
 			center: latlng,
-			mapTypeId: google.maps.mapTypeId.ROADMAP
+			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		var map = new google.maps.Map($('.map-canvas')[0], myOptions);
 
