@@ -14,16 +14,18 @@
 	<link rel="stylesheet" href="style.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgYh-UffzCV54XCcReML4WSqyb0_zv8x8">
 	<script src="skycon.js"></script>
 	<script src="script.js"></script>
 
 </head>
 <body>
-
+<!-- Main seite -->
 <div data-role="page" id="main">
 
 	<div data-role="header">
 		<h1 class="geoloc"></h1>
+		<a href="#map" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-location">Map</a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
@@ -69,5 +71,16 @@
 </div><!-- /page -->
 
 
+<!-- Maps -->
+	<div data-role="page" id="map">
+		<div data-role="header">
+			<a href="#main" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-back">Back</a>
+			<h1 class="address">…</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<div class="map-canvas"></div>
+		</div><!-- /content -->
+	</div><!-- /page -->
 </body>
 </html>
