@@ -1,12 +1,15 @@
 $(document).ready(function(){
-	
+
+		var koordinaten;
 	navigator.geolocation.getCurrentPosition(function(position){
-		var koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
+		koordinaten = {longitude: position.coords.longitude, latitude: position.coords.latitude};
 		var icon;
 		var skycons = new Skycons({
 		color: "grey",
 		resizeClear: true,
 		});
+
+	drawMap(new google.maps.LatLng(koordinaten.latitude, koordinaten.longitude));		
 
 
 		//forecast io
@@ -23,7 +26,9 @@ $(document).ready(function(){
 	console.log(data);
 	$('.temp').text(data.currently.apparentTemperature+' °C') ;
 	$('.forecast').text(data.daily.summary) ;
-	$('.minmax').text('Minimal Temperatur: '+data.daily.data[0].apparentTemperatureMin+' °C ¦ Maximal Temperatur: '+data.daily.data[0].apparentTemperatureMax+' °C') ;
+	$('.minmax').text('Minimal Temperatur: '+data.daily.data[0].apparentTemperatureMin+
+					 ' °C ¦ Maximal Temperatur: '+data.daily.data[0].apparentTemperatureMax+' °C') ;
+
 	
 	icon = data.currently.icon.toUpperCase();
 	console.log(icon);
@@ -49,7 +54,25 @@ $(document).ready(function(){
 		});
 
 	});
-
 	
+	$(document).on('pageshow','#map', function() {
+		console.log(koordinaten);
+		drawMap(new google.maps.LatLng(koordinaten.latitude, koordinaten.longitude));
+	});
+
+	function drawMap(LatLng) {
+		var myOptions = {
+			zoom: 10,
+			center: latlng,
+			mapTypeId: google.maps.mapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map($('.map-canvas')[0], myOptions);
+
+		var marker = new google.maps.Marker({
+			position: latlng,
+			map: map
+		});
+	}
+
 	
 });
