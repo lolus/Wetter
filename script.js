@@ -22,7 +22,7 @@ $(document).ready(function(){
 	console.log(data);
 	$('.temp').text(data.currently.apparentTemperature+' °C') ;
 	$('.forecast').text(data.daily.summary) ;
-	$('.minmax').text(data.daily.data[0].apparentTemperatureMin+' °C ¦ Maximal Temperatur:'+data.daily.data[0].apparentTemperatureMax+' °C') ;
+	$('.minmax').text('Minimal Temperatur: '+data.daily.data[0].apparentTemperatureMin+' °C ¦ Maximal Temperatur: '+data.daily.data[0].apparentTemperatureMax+' °C') ;
 	
 	icon = data.currently.icon.toUpperCase();
 	console.log(icon);
